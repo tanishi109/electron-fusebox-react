@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "electron starter kit",
   "private": true,
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
-    "start": "node fuse",
+    "start": "tsc && node fuse",
     "release": "electron-packager . Release --platform=darwin --arch=x64"
   },
   "devDependencies": {
