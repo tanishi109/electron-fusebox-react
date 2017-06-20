@@ -18,12 +18,13 @@ Sparky.task("default", ["copy-html"], () => {
 
   fuse.dev({
     port: 8080,
+    httpServer: false,
   });
 
   fuse.bundle("windows/main/index")
     .target("electron")
     .watch()
-    .instructions("> windows/main/index.ts");
+    .instructions(" > [windows/main/index.tsx]");
 
   return fuse.run().then(() => {
     const child = spawn("node", [`${ __dirname }/node_modules/electron/cli.js`,  __dirname ]);
