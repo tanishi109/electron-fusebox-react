@@ -20,7 +20,7 @@ Sparky.task("default", ["copy-html"], () => {
     port: 8080,
   });
 
-  fuse.bundle("index")
+  fuse.bundle("windows/main/index")
     .target("electron")
     .watch()
     .instructions("> windows/main/index.ts");
