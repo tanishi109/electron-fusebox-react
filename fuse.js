@@ -6,7 +6,7 @@ const {
 const {spawn} = require("child_process");
 
 Sparky.task("copy-html", () => {
-  return Sparky.src("./src/windows/main/*.html").dest("./dist/windows/main/$name");
+  return Sparky.src("./**/*.html", {base: "./src/windows"}).dest("./dist/windows/");
 });
 
 Sparky.task("default", ["copy-html"], () => {
