@@ -11,10 +11,9 @@
   "devDependencies": {
     "@types/react": "^15.0.29",
     "@types/react-dom": "^15.5.0",
-    "electron": "^1.6.11",
-    "electron-packager": "^8.7.1",
+    "electron": "^1.7.3",
     "fuse-box": "^2.1.0",
-    "typescript": "^2.3.4"
+    "typescript": "^2.4.0"
   },
   "dependencies": {
     "react": "^15.6.1",
