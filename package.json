@@ -6,16 +6,17 @@
   "main": "dist/main.js",
   "scripts": {
     "start": "tsc && node fuse",
-    "release": "electron-packager . Release --platform=darwin --arch=x64"
+    "release": "electron-packager . Release --platform=darwin --arch=x64 --overwrite"
   },
   "devDependencies": {
     "@types/react": "^15.0.29",
     "@types/react-dom": "^15.5.0",
     "electron": "^1.7.3",
-    "fuse-box": "^2.1.0",
+    "electron-packager": "^8.7.1",
     "typescript": "^2.4.0"
   },
   "dependencies": {
+    "fuse-box": "^2.1.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }
