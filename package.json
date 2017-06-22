@@ -4,13 +4,19 @@
   "description": "electron starter kit",
   "private": true,
   "main": "dist/main.js",
+  "config": {
+    "dir_name": "node __dirname"
+  },
   "scripts": {
-    "start": "tsc && node fuse",
+    "start": "node fuse",
+    "app": "electron .",
+    "build": "cross-env NODE_ENV=production node fuse && electron-packager . Release --platform=darwin --arch=x64 --overwrite",
     "release": "electron-packager . Release --platform=darwin --arch=x64 --overwrite"
   },
   "devDependencies": {
     "@types/react": "^15.0.29",
     "@types/react-dom": "^15.5.0",
+    "cross-env": "^5.0.1",
     "electron": "^1.7.3",
     "electron-packager": "^8.7.1",
     "typescript": "^2.4.0"

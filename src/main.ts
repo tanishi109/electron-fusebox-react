@@ -23,7 +23,7 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'windows/main/index.html'),
+    pathname: path.join(__process_env__.NDENV_DIR, 'dist/windows/main/index.html'),
     protocol: 'file:',
     slashes: true
   }))
