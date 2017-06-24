@@ -1,7 +1,6 @@
 const {
   FuseBox,
   Sparky,
-  EnvPlugin,
 } = require("fuse-box");
 
 const {spawn} = require("child_process");

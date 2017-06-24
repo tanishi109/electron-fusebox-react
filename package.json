@@ -4,9 +4,6 @@
   "description": "electron starter kit",
   "private": true,
   "main": "dist/main.js",
-  "config": {
-    "dir_name": "node __dirname"
-  },
   "scripts": {
     "start": "node fuse",
     "app": "electron .",
