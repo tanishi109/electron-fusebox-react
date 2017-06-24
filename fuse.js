@@ -26,11 +26,6 @@ Sparky.task("default", ["copy-html"], () => {
 
     fuse.bundle("main")
       .target("electron")
-      .plugin(
-        EnvPlugin({
-          NDENV_DIR: process.env.NDENV_DIR
-        })
-      )
       .watch()
       .instructions(" > [main.ts]");
 
@@ -47,23 +42,12 @@ Sparky.task("default", ["copy-html"], () => {
       });
     });
   } else {
-    console.log("*** production")
     fuse.bundle("main")
       .target("electron")
-      .plugin(
-        EnvPlugin({
-          NDENV_DIR: process.env.NDENV_DIR
-        })
-      )
       .instructions(" > [main.ts]");
 
     fuse.bundle("windows/main/index")
       .target("electron")
-      .plugin(
-        EnvPlugin({
-          NDENV_DIR: process.env.NDENV_DIR
-        })
-      )
       .instructions(" > windows/main/index.tsx");
 
     return fuse.run();
