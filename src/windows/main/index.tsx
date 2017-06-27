@@ -7,6 +7,8 @@ interface State {
   body: string;
 }
 
+import Button from "~/components/Button";
+
 class Main extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -23,6 +25,9 @@ class Main extends React.Component<Props, State> {
       <div>
         <h1>sample app</h1>
         <p>{body}</p>
+        <Button>
+          styled button
+        </Button>
       </div>
     );
   }
