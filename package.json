@@ -19,7 +19,7 @@
     "typescript": "^2.4.0"
   },
   "dependencies": {
-    "fuse-box": "^2.1.0",
+    "fuse-box": "^2.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "styled-components": "^2.1.0"
