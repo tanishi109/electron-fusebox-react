@@ -1,6 +1,12 @@
 import * as React from "react";
 import {render} from "react-dom";
 
+import {
+  remote,
+} from "electron";
+
+const main = remote.require("./main").FuseBox.main("default/mainProcesses/main.js");
+
 interface Props {
 }
 interface State {
@@ -25,11 +31,16 @@ class Main extends React.Component<Props, State> {
       <div>
         <h1>sample app</h1>
         <p>{body}</p>
-        <Button>
+        <Button
+          onClick={this.handleClick}>
           styled button
         </Button>
       </div>
     );
+  }
+
+  handleClick() {
+    alert(main.fn());
   }
 }
 
