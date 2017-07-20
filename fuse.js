@@ -34,7 +34,7 @@ Sparky.task("default", ["copy-html"], () => {
       .instructions(" > [windows/main/index.tsx]");
 
     return fuse.run().then(() => {
-      const child = spawn("node", [`${ __dirname }/node_modules/electron/cli.js`,  __dirname ]);
+      const child = spawn("node", [`${ __dirname }/node_modules/electron/cli.js`, __dirname ]);
 
       child.stdout.on('data', function (data) {
         console.log("electron > " + data);
