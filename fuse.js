@@ -23,10 +23,10 @@ Sparky.task("default", ["copy-html"], () => {
       httpServer: false,
     });
 
-    fuse.bundle("main")
+    fuse.bundle("mainProcesses/main")
       .target("electron")
       .watch()
-      .instructions(" > [main.ts]");
+      .instructions(" > [mainProcesses/main.ts]");
 
     fuse.bundle("windows/main/index")
       .target("electron")
@@ -41,9 +41,9 @@ Sparky.task("default", ["copy-html"], () => {
       });
     });
   } else {
-    fuse.bundle("main")
+    fuse.bundle("mainProcesses/main")
       .target("electron")
-      .instructions(" > [main.ts]");
+      .instructions(" > [mainProcesses/main.ts]");
 
     fuse.bundle("windows/main/index")
       .target("electron")

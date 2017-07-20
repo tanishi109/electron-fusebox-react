@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "electron starter kit",
   "private": true,
-  "main": "dist/main.js",
+  "main": "dist/mainProcesses/main.js",
   "scripts": {
     "start": "node fuse",
     "app": "electron .",
